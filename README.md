@@ -1,6 +1,6 @@
 # Great Dialogs :left_speech_bubble:	
 
-GreatDialogs is an Android library that provides customizable dialog options to enhance user interactions in your app.
+Great dialogs is an Android library that provides customizable dialog options to enhance user interactions in your app.
 Choose from three types of dialogs: success, error, and question.
 Each dialog comes with a Lottie animation and various customization options.
 
