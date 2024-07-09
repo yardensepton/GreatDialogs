@@ -2,6 +2,8 @@ package com.example.greatdialogs;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.os.VibrationEffect;
+import android.os.Vibrator;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -18,7 +20,9 @@ public class GreatDialog {
     private final TextView message;
     private final Button okButton;
     private final LottieAnimationView animationView;
-    private final  View space;
+    private final View space;
+    private final Vibrator vibrator;
+    private boolean shouldVibrate = false;
 
 
     public interface setOnClickListener {
@@ -26,6 +30,8 @@ public class GreatDialog {
     }
 
     public GreatDialog(Context context, DialogType dialogType) {
+        vibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
+
         dialog = new Dialog(context);
         FrameLayout rootView = new FrameLayout(context);
 
@@ -78,6 +84,23 @@ public class GreatDialog {
         }
         return this;
     }
+
+    public GreatDialog setVibrate(boolean isVibrate) {
+        shouldVibrate = isVibrate;
+        return this;
+
+    }
+
+    private void vibrate() {
+        if (shouldVibrate && vibrator != null && vibrator.hasVibrator()) {
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+                vibrator.vibrate(VibrationEffect.createOneShot(100, VibrationEffect.DEFAULT_AMPLITUDE));
+            } else {
+                vibrator.vibrate(100);
+            }
+        }
+    }
+
     public GreatDialog setTitle(String titleText) {
         title.setText(titleText);
         return this;
@@ -132,6 +155,7 @@ public class GreatDialog {
 
     public void show() {
         dialog.show();
+        vibrate();
     }
 
     public GreatDialog setCancelButtonText(String buttonText) {
