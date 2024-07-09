@@ -7,7 +7,9 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.greatdialogs.GreatSuccessDialog;
+import com.example.greatdialogs.ButtonNames;
+import com.example.greatdialogs.DialogType;
+import com.example.greatdialogs.GreatDialog;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,22 +18,24 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        findViewById(R.id.show_dialog_button).setOnClickListener(v -> new GreatSuccessDialog(MainActivity.this)
-                .setTitle("Success")
-                .setMessage("The item was added to the list!")
-                .setButtonText("OK")
-                .setTitleColor(Color.BLACK)
-                .setMsgColor(Color.BLACK)
-                .setButtonColor(Color.GREEN)
-                .setTextColor(Color.BLACK)
-                .setOnClickListener(this::performCustomAction)
-                .show());
+        findViewById(R.id.show_dialog_button).setOnClickListener(v -> {
+            GreatDialog dialog = new GreatDialog(MainActivity.this, DialogType.ERROR);
+            dialog.setTitle("ERROR")
+                    .setButtonVisibility(ButtonNames.OK, true)
+                    .setButtonVisibility(ButtonNames.CANCEL,false)
+                    .setMessage("We are sorry, please try again!")
+                    .setOKButtonText("OK")
+                    .setOkButtonColor(Color.RED)
+                    .setTitleColor(Color.BLACK)
+                    .setMsgColor(Color.BLACK)
+                    .setOKButtonOnClickListener(this::performCustomAction).show();
+        });
     }
 
     private void performCustomAction() {
-        int x= 1;
+        int x = 1;
         int y = 3;
-        int z = x+y;
-        Log.d("z is",z+"");
+        int z = x + y;
+        Log.d("z is", z + "");
     }
 }

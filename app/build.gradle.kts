@@ -35,7 +35,7 @@ dependencies {
     implementation(libs.activity)
     implementation(libs.constraintlayout)
     implementation(project(":GreatDialogs"))
-    implementation("com.airbnb.android:lottie:3.4.0")
+    implementation("com.airbnb.android:lottie:4.1.0")
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
