@@ -106,7 +106,6 @@ https://github.com/yardensepton/GreatDialogs/assets/98481395/5d786139-f40f-42da-
 Lottie Animations:
 
 This library utilizes Lottie animations provided by LottieFiles.
-I would like to give credit to LottieFiles for their fantastic animations that enhance the visual appeal of my dialogs.
 
 
 
