@@ -2,10 +2,13 @@ package com.example.greatdialogs;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.VibrationEffect;
 import android.os.Vibrator;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.TextView;
@@ -36,9 +39,10 @@ public class GreatDialog {
         FrameLayout rootView = new FrameLayout(context);
 
 
-        View view = LayoutInflater.from(context).inflate(R.layout.great_question_dialog, rootView, false);
-
+        View view = LayoutInflater.from(context).inflate(R.layout.great_dialog, rootView, false);
         dialog.setContentView(view);
+
+        setRoundedCorners();
 
         title = view.findViewById(R.id.dialog_title);
         message = view.findViewById(R.id.dialog_message);
@@ -69,6 +73,13 @@ public class GreatDialog {
         }
 
         animationView.setAnimation(animationResId);
+    }
+
+    private void setRoundedCorners() {
+        Window window = dialog.getWindow();
+        if (window != null) {
+            window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        }
     }
 
     public GreatDialog setButtonVisibility(ButtonNames name, boolean visible) {
