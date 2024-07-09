@@ -76,6 +76,13 @@ GreatDialog dialog = new GreatDialog(MainActivity.this, DialogType.QUESTION);
                     .setOKButtonOnClickListener(this::performCustomAction).show();
 ```
 
+preview :movie_camera:	
+
+https://github.com/yardensepton/GreatDialogs/assets/98481395/5d786139-f40f-42da-a1ba-0dc7f0275230
+
+
+
+
 
 
 
