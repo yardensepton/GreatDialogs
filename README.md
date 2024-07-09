@@ -17,10 +17,30 @@ Each dialog comes with a Lottie animation and various customization options.
 ```
 dependencies {
     implementation 'com.example.greatdialogs:greatdialogs:1.0.1'
-    implementation("com.airbnb.android:lottie:4.1.0")
 }
 ```
-2. Add the following permission to your AndroidManifest.xml file:
+2. Add the following code to your settings.gradle.kts file (if using Gradle 7.0 and above):
+```
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url =uri("https://jitpack.io") }
+
+    }
+}
+```
+For older versions of Gradle, add the repositories block directly to the build.gradle file of the root project:
+```
+repositories {
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+}
+```
+
+
+3. Add the following permission to your AndroidManifest.xml file:
 
 ```
 <uses-permission android:name="android.permission.VIBRATE"/>
@@ -79,6 +99,13 @@ GreatDialog dialog = new GreatDialog(MainActivity.this, DialogType.QUESTION);
 ## Preview :movie_camera:	
 
 https://github.com/yardensepton/GreatDialogs/assets/98481395/5d786139-f40f-42da-a1ba-0dc7f0275230
+
+
+
+## Credits :copyright:	
+Lottie Animations
+This library utilizes Lottie animations provided by LottieFiles.
+I would like to give credit to LottieFiles for their fantastic animations that enhance the visual appeal of my dialogs.
 
 
 
