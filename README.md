@@ -27,7 +27,7 @@ dependencies {
 ```
 ## Usage:
 
-Example of an error dialog:
+Example of an error dialog :triangular_flag_on_post:	
 
 ```
             GreatDialog dialog = new GreatDialog(MainActivity.this, DialogType.ERROR);
@@ -43,7 +43,7 @@ Example of an error dialog:
                     .setOKButtonOnClickListener(this::performCustomAction).show();
 ```
 
-Example of a success dialog:
+Example of a success dialog: :heavy_check_mark:	
 
 ```
  GreatDialog dialog = new GreatDialog(MainActivity.this, DialogType.SUCCESS);
@@ -59,7 +59,7 @@ Example of a success dialog:
                     .setOKButtonOnClickListener(this::performCustomAction).show();
 ```
 
-Example of a question dialog:
+Example of a question dialog :warning:	
 
 ```
 GreatDialog dialog = new GreatDialog(MainActivity.this, DialogType.QUESTION);
