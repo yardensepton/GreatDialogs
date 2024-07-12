@@ -16,7 +16,7 @@ Each dialog comes with a Lottie animation and various customization options.
 1. Add the following dependency to your build.gradle file:
 ```
 dependencies {
-    implementation 'com.example.greatdialogs:greatdialogs:1.0.1'
+    implementation ("com.example.greatdialogs:greatdialogs:1.0.1")
 }
 ```
 2. Add the following code to your settings.gradle.kts file (if using Gradle 7.0 and above):
