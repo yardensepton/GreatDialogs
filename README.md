@@ -57,7 +57,7 @@ import com.example.greatdialogs.GreatDialog;
 Example of an error dialog :triangular_flag_on_post:	
 
 ```
-            GreatDialog dialog = new GreatDialog(MainActivity.this, DialogType.ERROR);
+GreatDialog dialog = new GreatDialog(MainActivity.this, DialogType.ERROR);
             dialog.setTitle("ERROR")
                     .setVibrate(true)
                     .setButtonVisibility(ButtonNames.OK, true)
