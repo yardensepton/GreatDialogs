@@ -47,6 +47,13 @@ repositories {
 ```
 ## Usage:
 
+Add those imports:
+```
+import com.example.greatdialogs.ButtonNames;
+import com.example.greatdialogs.DialogType;
+import com.example.greatdialogs.GreatDialog;
+```
+
 Example of an error dialog :triangular_flag_on_post:	
 
 ```
@@ -60,7 +67,7 @@ Example of an error dialog :triangular_flag_on_post:
                     .setOkButtonColor(Color.RED)
                     .setTitleColor(Color.BLACK)
                     .setMsgColor(Color.BLACK)
-                    .setOKButtonOnClickListener(this::performCustomAction).show();
+                    .setOKButtonOnClickListener(this::YOUR_FUNCTION).show();
 ```
 
 Example of a success dialog: :heavy_check_mark:	
@@ -76,7 +83,7 @@ Example of a success dialog: :heavy_check_mark:
                     .setOkButtonTextColor(Color.BLACK)
                     .setTitleColor(Color.BLACK)
                     .setMsgColor(Color.BLACK)
-                    .setOKButtonOnClickListener(this::performCustomAction).show();
+                    .setOKButtonOnClickListener(this::YOUR_FUNCTION).show();
 ```
 
 Example of a question dialog :warning:	
@@ -93,7 +100,7 @@ GreatDialog dialog = new GreatDialog(MainActivity.this, DialogType.QUESTION);
                     .setCancelButtonTextColor(Color.WHITE)
                     .setTitleColor(Color.BLACK)
                     .setMsgColor(Color.BLACK)
-                    .setOKButtonOnClickListener(this::performCustomAction).show();
+                    .setOKButtonOnClickListener(this::YOUR_FUNCTION).show();
 ```
 
 ## Preview :movie_camera:	
